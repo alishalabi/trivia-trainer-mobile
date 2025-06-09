@@ -8,6 +8,7 @@ body {
   background-image: linear-gradient(to bottom right, #cffdfd, #1e75cb);
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
+  height: 100%;
 }
 
 .App {
@@ -24,6 +25,7 @@ body {
   text-shadow: 1px 1px black;
   /* background-color: #fdd03e; */
   background-image:  linear-gradient(to top left, #fee79a, #fdd03e);
+  border-radius: 25%;
 }
 
 .subTitle{
