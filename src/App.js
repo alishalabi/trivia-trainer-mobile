@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react"
 
 const URL = `https://api.api-ninjas.com/v1/trivia`
+const WIKIPEDIA = ``
 const apiKey = process.env.REACT_APP_SECRET_KEY
 
 function App() {
@@ -31,9 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={fetchData}>New Question</button>
-      <h1>Question: {question}</h1>
+      <h1 class="mainTitle">Trivia Trainer Mobile</h1>
+      <h2 class="subTitle">Endless Trivia On the Go</h2>
+      <h3>Question: {question}</h3>
       <button onClick={handleAnswerClick}>Show Answer!</button>
+      <button onClick={fetchData}>New Question</button>
       {answerIsVisible &&
         <h1>Answer: {answer}</h1>
       }
