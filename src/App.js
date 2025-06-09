@@ -7,6 +7,7 @@ const apiKey = process.env.REACT_APP_SECRET_KEY
 function App() {
 
   const [question, setQuestion] = useState("No question")
+  const [questionNumber, setQuestionNumber] = useState(0)
   const [answer, setAnswer] = useState("No answer")
   const [answerIsVisible, toggleVisible] = useState(false)
 
@@ -15,6 +16,7 @@ function App() {
   }
 
   const fetchData = async () => {
+    setQuestionNumber(questionNumber + 1)
     toggleVisible(false)
     const result = await fetch(URL, {
       headers: {'X-Api-Key': apiKey}
@@ -32,14 +34,22 @@ function App() {
 
   return (
     <div className="App">
-      <h1 class="mainTitle">Trivia Trainer Mobile</h1>
-      <h2 class="subTitle">Endless Trivia On the Go</h2>
-      <h3>Question: {question}</h3>
-      <button onClick={handleAnswerClick}>Show Answer!</button>
-      <button onClick={fetchData}>New Question</button>
-      {answerIsVisible &&
-        <h1>Answer: {answer}</h1>
-      }
+      <div class="appBody">
+        <h1 class="mainTitle">Trivia Trainer Mobile</h1>
+        <h2 class="subTitle">Endless Trivia On the Go</h2>
+        <div class="questionSection">
+          <h3 class="question">Question #{questionNumber}: {question}</h3>
+        </div>
+        <div class="buttonSection">
+          <button onClick={handleAnswerClick}>Show Answer!</button>
+          <button onClick={fetchData}>New Question</button>
+        </div>
+        <div class="answerSection">
+          {answerIsVisible &&
+            <h3 class="answer">Answer: {answer}</h3>
+          }
+        </div>
+      </div>
     </div>
   );
 }
