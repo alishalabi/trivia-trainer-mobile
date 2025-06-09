@@ -50,8 +50,9 @@ body {
   text-align: center;
   margin: auto;
   color: #e3eaf1;
-  font-size: 25px;
+  font-size: 18px;
   text-shadow: 1px 1px black;
+  padding-top: 20px;
 }
 
 .buttonSection{
@@ -61,7 +62,7 @@ body {
 }
 
 button{
-  padding: 3%;
+  padding: 5%;
   margin-bottom: 2%;
   background-color: #4CA671;
   border: none;
