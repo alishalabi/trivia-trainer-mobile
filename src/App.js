@@ -36,12 +36,12 @@ function App() {
     <div className="App">
       <div class="appBody">
         <h1 class="mainTitle">Trivia Trainer Mobile</h1>
-        <h2 class="subTitle">Endless Trivia On the Go</h2>
+        {/* <h2 class="subTitle">Endless Trivia On the Go</h2> */}
         <div class="questionSection">
           <h3 class="question">Question #{questionNumber}: {question}</h3>
         </div>
         <div class="buttonSection">
-          <button onClick={handleAnswerClick}>Show Answer!</button>
+          <button onClick={handleAnswerClick}>Show Answer</button>
           <button onClick={fetchData}>New Question</button>
         </div>
         <div class="answerSection">
